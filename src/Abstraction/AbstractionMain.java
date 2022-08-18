@@ -3,8 +3,8 @@ package Abstraction;
 public class AbstractionMain {
     public static void main(String[] args){
         Dog newDog = new Dog();
-        newDog.showGrowl();
+        newDog.animalSound();
         Cat newCat = new Cat();
-        newCat.showGrowl();
+        newCat.animalSound();
     }
 }
