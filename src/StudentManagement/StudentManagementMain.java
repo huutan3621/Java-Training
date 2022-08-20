@@ -24,30 +24,35 @@ public class StudentManagementMain {
         studentList.add(student2);
         studentList.add(student3);
 
-        School college1 = new School(teacherList,studentList);
+        School theSchool1 = new School(teacherList,studentList);
 
         Teacher teacher4 = new Teacher(6,"teacher4", 400);
 
-        college1.addTeacher(teacher4);
-
+        theSchool1.addTeacher(teacher4);
 
         student1.payFees(10000);
         student2.payFees(60000);
-        System.out.println("School1 has earned $"+ college1.getTotalMoneyEarned());
+        
+        System.out.println("School1 has earned $"+ theSchool1.getTotalMoneyEarned());
 
         System.out.println("--- SCHOOL SALARY LIST ---");
         teacher1.receiveSalary(teacher1.getSalary());
         System.out.println("School1 has spent for salary to " + teacher1.getName()
-                +" and now they has $" + college1.getTotalMoneyEarned());
+                +" and now they has $" + theSchool1.getTotalMoneyEarned());
 
         teacher2.receiveSalary(teacher2.getSalary());
         System.out.println("School1 has spent for salary to " + teacher2.getName()
-                +" and now they has $" + college1.getTotalMoneyEarned());
-
-        System.out.println(student2);
+                +" and now they has $" + theSchool1.getTotalMoneyEarned());
 
         teacher3.receiveSalary(teacher3.getSalary());
+        System.out.println("School1 has spent for salary to " + teacher3.getName()
+                +" and now they has $" + theSchool1.getTotalMoneyEarned());
 
+        System.out.println(student1);
+        System.out.println(student2);
+        System.out.println(student3);
+
+        teacher3.receiveSalary(teacher3.getSalary());
         System.out.println(teacher3);
     }
 }
